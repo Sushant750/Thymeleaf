@@ -5,9 +5,9 @@
     <title>Student Data</title>
 </head>
 <body>
-<form>
-    Name :<input type="text"/>
-    Score :<input type="text"/>
+<form th:action="@{/saveStudent}" th:object="${student}" method="post">
+    Name :<input type="text" th:field="*{name}"/>
+    Score :<input type="text" th:field="*{score}"/>
     <input type="submit" value="Save"/>
     <input type="reset" value="Reset"/>
 </form>
